@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RoomFour — four-bar room desk</title>
+  <meta name="description" content="Four live-instrument bars that open room so the next section can land. The loop is crowded. Session players mute one chair." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>RoomFour</h1>
+  <p class="lead">Four-bar room desk. The loop is full and the hook or vocal has no pocket. Session players mute one chair for four bars so the next section hits with room. Live FluidR3 piano, upright, nylon, kit, trumpet, violin. Not a mute-eight. Not a tag. Not a lift.</p>
+  <p class="status" id="status">Tap to start audio…</p>
+  <p class="eyebrow">Settings</p>
+  <div class="row">
+    <label>BPM <input id="bpm" type="number" min="60" max="180" value="98" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>E major</option><option>D minor</option><option>G major</option></select></label>
+  </div>
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Room (which chair leaves for four bars)</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · pocket 1–8 · room 9–12</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+</main>
+<div class="dock">
+  <button id="playA">A · Full loop</button>
+  <button id="playB">B · With room</button>
+  <button id="play8">8 · Room only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="exportWav">Export WAV</button>
+  <button class="ghost" id="exportMid">Export MIDI</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
